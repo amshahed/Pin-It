@@ -11,9 +11,9 @@ app.use(express.static(__dirname + '/'));
 app.use(bp.urlencoded({ extended: false }));
 var port = process.env.PORT || 8080;
 
-mongo.connect('mongodb://127.0.0.1/', function(err, client){
+mongo.connect('mongodb://jesus_christ:jesuschrist@ds249727.mlab.com:49727/dabba', function(err, client){
 	if (err)	return console.log(err);
-	db = client.db('archive');
+	db = client.db('dabba');
 
 	app.listen(port, function(){
 		console.log('listening on port '+port);

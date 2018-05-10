@@ -21,9 +21,10 @@ $(document).ready(function(){
 				return;
 			}
 			var email = localStorage.getItem('email');
+			var div = '';
 			for (var i=0; i<json.length; i++){
 				var name = json[i].name.split(' ')[0];
-				var div = '<div class="grid-item">';
+				div += '<div class="grid-item">';
 				div += '<img onerror="imgError(this)" class="imgs" src="'+json[i].link+'">';
 				div += '<div class="info-holder">';
 				div += '<h3 class="title">'+json[i].title+'</h3>';
@@ -35,9 +36,11 @@ $(document).ready(function(){
 					div += '<i class="fa fa-heart" onclick="likeImage(\''+json[i]._id+'\')"></i>&nbsp;&nbsp;';
 				div += '<span class="likes">'+json[i].likes.length+'</span>';
 				div += '</div></div></div>';
-				var $div = $(div);
-				$grid.append($div).masonry('appended', $div);
+				// var $div = $(div);
+				// $grid.append($div).masonry('appended', $div);
 			}
+			var $div = $(div);
+			$grid.append($div).masonry('appended', $div);
 		}
 	})
 })
