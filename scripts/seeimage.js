@@ -2,18 +2,27 @@ $(document).ready(function(){
 	if (localStorage.getItem('newmail')==null)
 		window.open('/','_self');
 
+	var $grid = $('.grid').masonry({
+	  itemSelector: '.grid-item',
+	  columnWidth: 220,
+	  gutter: 5
+	});
+
+	setTimeout(function() { mason(); }, 1500);
+
 	$('#sout').hide();
 	$('.g-signin2').show();
 	$('.allpins').hide();
 	$('.mypins').hide();
 	$('.addpin').hide();
 
-	var $grid = $('.grid').masonry({
-	  // options
-	  itemSelector: '.grid-item',
-	  columnWidth: 220,
-	  gutter: 10
-	});
+	function mason(){
+		var $grid = $('.grid').masonry({
+		  itemSelector: '.grid-item',
+		  columnWidth: 220,
+		  gutter: 5
+		});
+	}
 	
 	var email = localStorage.getItem('newmail');
 	$.ajax({

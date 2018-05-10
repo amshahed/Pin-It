@@ -1,16 +1,27 @@
 
 $(document).ready(function(){
-	$('#sout').hide();
-	$('.g-signin2').show();
-	$('.allpins').hide();
-	$('.mypins').hide();
-	$('.addpin').hide();
-	
+
 	var $grid = $('.grid').masonry({
 	  itemSelector: '.grid-item',
 	  columnWidth: 220,
 	  gutter: 5
 	});
+
+	setTimeout(function() { mason(); }, 1500);
+
+	$('#sout').hide();
+	$('.g-signin2').show();
+	$('.allpins').hide();
+	$('.mypins').hide();
+	$('.addpin').hide();
+
+	function mason(){
+		var $grid = $('.grid').masonry({
+		  itemSelector: '.grid-item',
+		  columnWidth: 220,
+		  gutter: 5
+		});
+	}
 
 	$.ajax({
 		type: 'POST',
@@ -99,7 +110,7 @@ function addPin(){
 				}
 				toastr.success('Image added', '', {timeOut: 1300});
 				closeModal();
-				location.reload();
+				window.open('/', '_self');
 			}
 		})
 	}
