@@ -1,0 +1,126 @@
+html, body {
+   margin:0;
+   padding:0;
+   min-width: 350px;
+   background: #123E4E;
+}
+#container {
+   position:relative;
+}
+#body {
+   padding-bottom:60px;
+   height: 100%;
+   min-width: 350px;
+}
+.navbar-brand {
+   font-family: 'Advent Pro';
+   font-weight: bold;
+}
+ul li {
+   font-family: monospace;
+}
+.abcRioButtonLightBlue {
+   background: #d9534f !important;
+   margin-top: 5px !important;
+   color: white !important;
+   font-weight: bold !important;
+   border-radius: 5px !important;
+   margin-right: 20px !important;
+}
+.addpin {
+   background: transparent;
+   border: 0;
+   padding-top: 15px;
+   color: #9d9d9d;
+   margin-right: 15px;
+}
+.addpin:hover, .addpin:focus {
+   color: white;
+   outline: 0;
+   border: 0;
+}
+input {
+   width: 80%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #888;
+    width: 50%;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.grid {
+  background: inherit;
+  max-width: 1200px;
+  margin: 0 70px;
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid-item {
+  width: 205px;
+  float: left;
+  background: white;
+  border: 2px solid #333;
+  box-shadow: 2.3px 2.3px 4px #888888;
+  margin-bottom: 10px;
+}
+.imgs {
+   width: 190px;
+   margin: 5px;
+}
+.info-holder {
+   background: #b0681c;
+}
+.title {
+   margin: 0;
+   padding: 2px;
+   text-align: center;
+   color: white;
+   font-family: 'Abel';
+   font-weight: bold;
+}
+.owner {
+   color: white;
+   padding: 5px;
+   font-family: 'Abel';
+   cursor: pointer;
+}
+.fa-heart {
+   color: white;
+}
+.fa-times {
+  color: white;
+}
+.likes {
+  cursor: pointer;
+   margin-right: 4px;
+   color: white;
+}

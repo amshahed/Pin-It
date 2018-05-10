@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pin It</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="/styles/index.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <meta name="google-signin-client_id" content="820059140698-ccv9vp1l1viltc89k4rokm7v93f8lvc4.apps.googleusercontent.com">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+
+<body>
+	<div id="container">
+   		<div id="body">
+        
+        <nav style='border-radius: 0;' class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/">Pin It</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a class="allpins" href="/">All Pins</a></li>
+              <li><button class='addpin' onclick="openModal()">Add Pin</button></li>
+              <li><div class="g-signin2" data-onsuccess="onSignIn"></div></li>
+              <li><button style='margin-right: 20px' class='btn btn-danger pull-right navbar-btn' id='sout' onclick="signOut()">Sign Out</button></li>
+            </ul>
+          </div>
+        </nav>
+      
+        <div id="addpinmodal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2><font face="Abel" size="6" color="blue">ADD IMAGE</font></h2>
+            <label>Link&nbsp;&nbsp;</label><input type='text' id='link'><br>
+            <label>Title&nbsp;&nbsp;</label><input type='text' id='title'><br>
+            <button class="btn btn-primary" onclick='addPin()'>Submit</button>
+          </div>
+        </div>
+
+        <div class='grid'>
+        </div>
+        
+   		</div>
+      
+	</div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script type="text/javascript" src="/scripts/mypins.js"></script>
+</html>
